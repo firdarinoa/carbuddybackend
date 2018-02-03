@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     autoIncrement = require('mongoose-auto-increment'),
-    connection = mongoose.createConnection('mongodb://localhost/carbuddy'),
+    connection = mongoose.createConnection('mongodb://localhost:27017/carbuddy'),
 	User = new Schema({
 		cars: {type:Schema.Types.ObjectId, ref: 'Car'},
 		name: {type:String, required: true},

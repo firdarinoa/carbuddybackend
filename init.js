@@ -10,7 +10,9 @@ var user = new User({
 })
 
 user.save(function(err){
+    console.log('berhasil5656')
     if (!err){
+        console.log('berhasil 1')
         var car = new Car({
             owner: user._id,
             car_type: 'a',
