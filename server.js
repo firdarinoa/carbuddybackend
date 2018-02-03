@@ -10,22 +10,11 @@ mongoose.connect('mongodb://localhost/carbuddy');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.listen(8081, function(){
+app.listen(8080, function(){
 	console.log('server berjalan di 8000')	
 })
 
 app.get('/getCarList', function(req,res){
-	// User.find(function(err, data){
-	// 	res.json(data)
-	// })
-
-	// User
-	// .findOne({name: "Firda"})
-	// .populate('cars')
-	// .exec(function(err,User){
-	// 	console.log('Car Name:',User);
-	// 	res.json(User);
-	// });
 
 	Car
 	.findOne({car_type: "a"})
